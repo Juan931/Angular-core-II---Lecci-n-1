@@ -1,0 +1,11 @@
+<div class="mb-3">
+    <label for="formGroupExampleInput" class="form-label"> Name: </label>
+    <input type="text" [(ngModel)]="myCountry.name" name="name" class="form-control" id="formGroupExampleInput" placeholder=" Name Ciudad">
+</div>
+<br>
+<div class="mb-3">
+    <label for="formGroupExampleInput2" class="form-label"> Capital </label>
+    <input type="text" [(ngModel)]="myCountry.capital" name="capial" class="form-control" id="formGroupExampleInput2" placeholder="Capital">
+</div>
+<br>
+<button type="button" class="btn btn-primary" (click)="probando()">Submit</button>
