@@ -1,4 +1,6 @@
+import { MapType } from "@angular/compiler";
 import { Component,OnInit } from "@angular/core";
+import { IntCountry } from "../interfaceCountry/country.interface";
 
 @Component({
     selector: "app-country",
@@ -8,17 +10,24 @@ import { Component,OnInit } from "@angular/core";
 })
 
 export class CountryComponent implements OnInit{
-
+    
+    public countries:IntCountry[]=[]
     myCountry= {
         name: '',
         capital: ''
         
     }
-
+    
     ngOnInit(){
 
     }
-    probando():void{
+    enviar():void{
         console.log(this.myCountry)
+    }
+
+    saveCoutry():void{
+        console.log(this.myCountry)
+        const newCountry= {...this.myCountry}
+        this.countries.push(newCountry)
     }
 }
