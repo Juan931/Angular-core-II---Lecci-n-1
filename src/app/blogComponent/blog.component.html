@@ -1,0 +1,29 @@
+<h1> Formulario 2</h1>
+
+<div>
+    <form #blg="ngForm" (ngSubmit)="enviar()">
+        <div class="mb-2">
+            <label for="exampleFormControlInput1" class="form-label">id:</label>
+
+            <input type="text" [(ngModel)]="blog.id" name="id" class="form-control" id="exampleFormControlInput1" placeholder="Numero de identificación" required #blogId="ngModel">
+            <span *ngIf="blogId.invalid">No se permiten campos vacios</span>
+            <span *ngIf="blogId.valid">Campos Validos.</span>
+        </div>
+        <br>
+        <div class="mb-2">
+            <label for="exampleFormControlInput1" class="form-label">title:</label>
+
+            <input type="text" [(ngModel)]="blog.title" name="title" class="form-control" id="exampleFormControlInput1" placeholder="titulo" required #blogtitle="ngModel">
+            <span *ngIf="blogtitle.invalid">No se permiten campos vacios</span>
+            <span *ngIf="blogtitle.valid">Campos Validos.</span>
+        </div>
+        <div class="mb-2">
+            <label for="exampleFormControlTextarea1" class="form-label">Body:</label>
+            <textarea class="form-control" [(ngModel)]="blog.body" name="body" id="exampleFormControlTextarea1" rows="3" placeholder="Caracteristicas" required #blogbody="ngModel"></textarea>
+            <span *ngIf="blogbody.invalid">No se permiten campos vacios</span>
+            <span *ngIf="blogbody.valid">Campos Validos.</span>
+        </div>
+
+        <button type="button" class="btn-secondary" type="submit">Submit</button>
+    </form>
+</div>

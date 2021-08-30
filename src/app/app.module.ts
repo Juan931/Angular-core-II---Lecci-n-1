@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CountryComponent } from './country/country.component';
+import { BlogComponent } from './blogComponent/blog.component';
 import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
     CountryComponent,
+    BlogComponent
     
   ],
   imports: [
