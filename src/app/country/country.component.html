@@ -1,12 +1,20 @@
-<form #form="ngForm" (ngSubmit)="enviar()">
+<form #myCoutry="ngForm" (ngSubmit)="enviar()">
     <div class="mb-3">
         <label for="formGroupExampleInput" class="form-label"> Name: </label>
-        <input type="text" [(ngModel)]="myCountry.name" name="name" class="form-control" id="formGroupExampleInput" placeholder=" Name Ciudad">
+        <input type="text" [(ngModel)]="myCountry.name" name="name" class="form-control" id="formGroupExampleInput" placeholder=" Name Ciudad" required #countryName="ngModel">
+        <span *ngIf="countryName.invalid">El nombre es requerido cuando ese campo sea dirty</span>
+        <span *ngIf="countryName.valid">Campos Validos.</span>
+        <!--Se pondra de color rojo cuando no hay campos-->
+        <!--Se pondra de color verde cuando  hay campos, y mostrara Campos Validos -->
     </div>
     <br>
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label"> Capital </label>
-        <input type="text" [(ngModel)]="myCountry.capital" name="capial" class="form-control" id="formGroupExampleInput2" placeholder="Capital">
+        <input type="text" [(ngModel)]="myCountry.capital" name="capial" class="form-control" id="formGroupExampleInput2" placeholder="Capital" required #countryName="ngModel">
+        <span *ngIf="countryName.invalid">El nombre es requerido cuando ese campo sea dirty</span>
+        <span *ngIf="countryName.valid">Campos Validos.</span>
+        <!--Se pondra de color rojo cuando no hay campos-->
+        <!--Se pondra de color verde cuando  hay campos, y mostrara Campos Validos -->
     </div>
     <br>
     <button type="button" class="btn btn-primary" type="submit">Submit</button>

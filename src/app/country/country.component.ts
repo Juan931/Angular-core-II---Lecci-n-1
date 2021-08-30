@@ -13,13 +13,14 @@ export class CountryComponent implements OnInit{
     
     public countries:IntCountry[]=[]
     myCountry= {
-        name: '',
+        name: ' ',
         capital: ''
         
     }
     
     ngOnInit(){
-
+        this.myCountry.name="Colombia";
+        this.myCountry.capital="Bogotá";
     }
     enviar():void{
         console.log(this.myCountry)
